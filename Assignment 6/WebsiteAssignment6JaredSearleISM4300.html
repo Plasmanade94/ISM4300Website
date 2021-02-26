@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="Website.css">
+ <style>
+body, html {
+  height: 80%;
+}
+
+.bg {
+  background-image: url("ForestBackground.jpg");
+  height: 100%; 
+  background-position: bottom; 
+  background-repeat: no-repeat; 
+  background-size: cover;
+}
+</style>
+<style>
+
+body {font-family: TimesNewRoman;}
+
+
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  float: center;
+}
+
+
+.tab button {
+  background-color: inherit;
+  float: center;
+  width:33%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+  
+}
+
+
+.tab button:hover {
+  background-color: #ddd;
+}
+
+
+.tab button.active {
+  background-color: #ccc;
+}
+
+
+.tabcontent {
+  background-color: lightblue;>
+  border: 100px solid black;
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+.tabheader {
+	text-align:left;
+	font-size:14px;
+}
+
+ul.a
+{
+ padding: 30px;
+ padding-left: 200px;
+}
+
+.center {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.tablink {
+	align:center;
+	padding-left: 150px;
+	padding-right: 150px;
+}	
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+</style>
+</head>
+<body>
+<div class="bg"></div>
+
+
+<div class="tab">
+   <button class="tabLinks" padding-left: 150px; padding-right: 150px; onclick="openTab(event, 'Home')">Home</button>
+   
+  <button class="tabLinks" onclick="openTab(event, 'Academic Information')">Academic Information</button>
+  
+  <button class="tabLinks" onclick="openTab(event, 'Contact Me')">Contact Me</button>
+  
+</div>
+
+
+
+<div id="Home" class="tabcontent">
+  <h2>Home</h2>
+  <br></br>
+<img src="Jared_Pic_xmas.jpg" alt="Jared" width="400" height="264"; margin:auto;>
+  
+
+  <h5>I am currently 23 years old and grew up in the Tampa Bay Area. I have lived through the <i>“roaring 90’s”</i> and the <i>“noughties”</i>. The Tampa Bay area is fairly integrated and I therefore have a good deal of exposure to different cultures. I am currently enrolled at University of South Florida, at the St. Petersburg Campus. My major is in Information Systsmes Management and I am in the process of finishing up my last semester. </h5>
+<br></br>
+<h5>In terms of job experience, I have worked for 2 years as a lab tech at Hillsborough Community College in the Humanities 220 Building. I worked there part time while also attending classes on the campus. I have also volunteered at Lowry Park Zoo during my junior and senior years in Highschool and also have around 50 hours logged at the Tampa Bay Humane Society. 
+
+</h5>
+
+  
+</div>
+
+<div id="Academic Information" class="tabcontent">
+  
+ 
+  <h2>Academic Information</h2>
+  <hr></hr>
+  
+  <h1>Academic History</h1>
+  <ul class = "a">
+<li>ISM 3232-Business Application Dvlpmnt</li>
+<li>ISM 4041-Global Cyber Ethics</li>
+<li>ISM 4212-Database Design/Administration</li>
+<li>ISM 4220-Business Data Communications</li>
+<li>ISM 4930-ST: Information Security</li>
+<li>ISM 4930-Data Analytics with R</li>
+</ul>
+<br></br>
+<h1>Certifications</h1>
+<br></br>
+  
+  <p>I am currently certified in the following programs:</p>
+  <ul class = "a">
+  <li>Visual Communication Using Adobe Photoshop CS6 Certificate</li>
+  <li>Rich Media Communication using Adobe Flash CS6 Certificate</li>
+  <li>Microsoft Office Specialist Certificate (Word, Excel, PowerPoint)</li>
+</ul>
+  <br></br>
+  <br></br>
+  <p>Here are some links to a few of my class projects:</p>
+  <ul class = "a">
+  <li><a href="ISM3113FinalProject.pdf" target="_blank">Systems Analysis and Design Final Project</a></li>
+  <li><a href="JaredSearle_WetlandReport.pdf" target="_blank">ECO WetlandReport</a></li>
+  <li><a href="AnAnalysisJaredSearle.pdf" target="_blank">Creative Writing Final Project</a></li>
+ </ul> 
+  <p>Please click <a href="Jsearle_Resume.pdf" target="_blank">here</a> 
+   to view my resume.</p>
+   
+   
+  
+</div>
+
+
+
+
+<div id="Contact Me" class="tabcontent">
+  <h2>Contact Me</h2>
+  
+
+<script>
+function formValidation() 
+{
+
+  var fname=document.forms["customer_Form"]["fname"].value;
+  if (fname == "") 	
+	{
+    alert("Please provide a valid first name");
+	return false;
+	}
+	
+  var lname=document.forms["customer_Form"]["lname"].value;
+  if (lname == "")
+    {
+	alert("Please provide a valid last name");
+	return false;
+	}
+	
+	var Email=document.forms["customer_Form"]["Email"].value;
+  if (Email == "")
+    {
+	alert("Please provide a valid Email address");
+	return false;
+	}
+	var Message=document.forms["customer_Form"]["Message"].value;
+  if (Message == "")
+    {
+	alert("The message field is blank.");
+	return false;
+	}
+  else alert ("Your message was sent.");
+  
+	
+	
+}
+</script>
+<div style="border:2px solid black; text-align:left; width:40%;  margin: auto;">
+
+<h4>Please enter the appropriate data into the fields below. Press <i><u>submit</u></i> to <i><u> submit</u> the form.</i></h4>
+<br>
+</br>
+
+<form name="customer_Form" action="/action_page.php" onsubmit="return formValidation()" method="post"; class="center">
+
+  First Name: <input type="text" name="fname" size=44%>
+  <br></br>
+  Last Name: <input type="text" name="lname" size=45%>
+  <br></br>
+  E-mail: <input type="text" name="Email" size=49%>
+  <br></br>
+  Message: <input style="height:200px; font-size:14pt; type="text" name="Message" size=40%;>
+  <br></br>
+  <div class="button"; align: right;>
+  <input type="submit" value="Submit">
+  </div>
+
+
+
+<hr></hr>
+
+<h6><b>Note: Your data will be recorded anonymously.</b></h6>
+
+
+
+  
+
+</form>
+</div>
+
+
+
+
+
+<script>
+document.getElementsByClassName("tablinks")[0].click()
+function openTab(evt, tabName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+
+
+</script>
+
+</body>
+ 
+</html> 
